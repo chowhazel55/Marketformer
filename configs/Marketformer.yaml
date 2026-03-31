@@ -1,0 +1,167 @@
+
+NASDAQ:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "NASDAQ"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 20
+  early_stop: 30
+  runner: "basic2"
+  loss: "mse"
+  model_args:
+    d_feat: 5
+    seq_len: 16
+    pred_len: 1
+    n_node: 1026
+    d_emb: 8
+    d_model: 64
+    dff: 256
+    nheads: 2
+    num_layers: 2
+    alpha: 1
+    dropout: 0.1
+
+NYSE:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "NYSE"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 20
+  early_stop: 30
+  runner: "basic2"
+  loss: "mse"
+  model_args:
+    d_feat: 5
+    seq_len: 16
+    pred_len: 1
+    n_node: 1737
+    d_emb: 28
+    d_model: 64
+    dff: 256
+    nheads: 2
+    num_layers: 2
+    alpha: 1
+    dropout: 0.1
+
+SP500:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "SP500"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 20
+  early_stop: 30
+  runner: "basic2"
+  loss: "mse"
+  model_args:
+    d_feat: 5
+    seq_len: 16
+    pred_len: 1
+    n_node: 474
+    d_emb: 20
+    d_model: 64
+    dff: 256
+    nheads: 2
+    num_layers: 2
+    alpha: 1
+    dropout: 0.1
+
+
+ACL18:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "ACL18"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 20
+  early_stop: 30
+  runner: "basic2"
+  loss: "mse"
+  weight_decay: 0 
+  model_args:
+    d_feat: 5
+    seq_len: 16
+    pred_len: 1
+    n_node: 84
+    d_emb: 28
+    d_model: 64
+    dff: 256
+    nheads: 2
+    num_layers: 2
+    alpha: 1
+    dropout: 0.1
+
+
+CMINUS:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "CMINUS"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 20
+  early_stop: 30
+  runner: "basic2"
+  loss: "mse"
+  weight_decay: 0 
+  model_args:
+    d_feat: 5
+    seq_len: 16
+    pred_len: 1
+    n_node: 109
+    d_emb: 8
+    d_model: 64
+    dff: 256
+    nheads: 2
+    num_layers: 2
+    alpha: 1
+    dropout: 0.1
+
+STOCK:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "STOCK"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 20
+  early_stop: 30
+  runner: "basic2"
+  loss: "mse"
+  weight_decay: 0 
+  model_args:
+    d_feat: 5
+    seq_len: 16
+    pred_len: 1
+    n_node: 2592
+    d_emb: 8
+    d_model: 64
+    dff: 256
+    nheads: 2
+    num_layers: 2
+    alpha: 1
+    dropout: 0.1

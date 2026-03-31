@@ -23,7 +23,7 @@ class MarketStock_CrossAttention(nn.Module):
         A=A+torch.eye(A.shape[0],device=device)
         return A
     
-    def updateQ(self,q,A):
+    def updateQ(self,q,A): #主要是这里的计算
         q=q.transpose(0,1) #[T,N,D]
         W = torch.einsum('ne,eio->nio',self.emb,self.We)
         b = torch.einsum('ne,eo->no',self.emb,self.be)
@@ -43,7 +43,7 @@ class MarketStock_CrossAttention(nn.Module):
         q = torch.cat(torch.split(q, D//self.nheads, dim=-1), dim=0)
         k = torch.cat(torch.split(k, D//self.nheads, dim=-1), dim=0)
         v = torch.cat(torch.split(v, D//self.nheads, dim=-1), dim=0)
-        attn_score = torch.softmax((q @ k.transpose(-1,-2)) / self.scale, dim=-1)
+        attn_score = torch.softmax((q @ k.transpose(-1,-2)) / self.scale, dim=-1) #还有这里的计算
         out = attn_score @ v
         out = torch.cat(torch.split(out, B, dim=0), dim=-1) 
         return self.out_proj(out)
