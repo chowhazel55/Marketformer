@@ -1,0 +1,20 @@
+[
+    {
+        "round": 1,
+        "name": "bootstrap_2014_2016",
+        "train_years": [
+            2014,
+            2015,
+            2016
+        ],
+        "valid_year": 2017,
+        "test_year": 2018,
+        "checkpoint": "../saved_models/LSTM/LSTM-CSI300-rolling-s8-2026-04-20-10-16-18/LSTM-CSI300-bootstrap_2014_2016.pt",
+        "valid_metrics": {
+            "IC": 0.019562890703617823,
+            "ICIR": 0.20407521991916605,
+            "RIC": 0.015012256737756057,
+            "RICIR": 0.17305611115116162,
+            "Prec@10": 0.5139344262295082,
+            "Prec@30": 0.5319672131147541,
+            "MAE": 

@@ -1,0 +1,4 @@
+Dataset:  CSI
+Radom seed: 1234
+GPU: 7
+Learning rate: 0.0001

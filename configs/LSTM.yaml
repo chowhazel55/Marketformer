@@ -1,0 +1,71 @@
+CSI:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "CSI"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 4
+    valid_year: 2018
+    test_year: 2019
+    window: 16
+    steps: 1
+  early_stop: 20
+  runner: "csi"
+  loss: "mse"
+  model_args:
+    d_feat: 1
+    hidden_size: 64
+    num_layers: 2
+    dropout: 0.1
+
+CSI300:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "CSI300"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 4
+    valid_year: 2018
+    test_year: 2019
+    window: 16
+    steps: 1
+  early_stop: 20
+  runner: "csi"
+  loss: "mse"
+  model_args:
+    d_feat: 1
+    hidden_size: 64
+    num_layers: 2
+    dropout: 0.1
+
+CSI2259:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "CSI2259"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 4
+    valid_year: 2018
+    test_year: 2019
+    window: 16
+    steps: 1
+  early_stop: 20
+  runner: "csi"
+  loss: "mse"
+  model_args:
+    d_feat: 1
+    hidden_size: 64
+    num_layers: 2
+    dropout: 0.1

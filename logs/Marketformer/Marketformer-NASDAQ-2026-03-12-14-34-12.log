@@ -1,0 +1,37 @@
+Dataset:  NASDAQ
+Radom seed: 1234
+GPU: 7
+Learning rate: 1e-05
+Loss: MaskedMSELoss
+
+---------- Marketformer ----------
+{
+    "epochs": 200,
+    "lookback_length": 16,
+    "steps": 1,
+    "lr": 0.0001,
+    "clip_grad": 3.0,
+    "data_args": {
+        "dataset": "NASDAQ",
+        "batch_size": 1,
+        "shuffle_train": true,
+        "n_jobs": 20
+    },
+    "early_stop": 30,
+    "runner": "basic2",
+    "loss": "mse",
+    "model_args": {
+        "d_feat": 5,
+        "seq_len": 16,
+        "pred_len": 1,
+        "n_node": 1026,
+        "d_emb": 8,
+        "d_model": 64,
+        "dff": 256,
+        "nheads": 2,
+        "num_layers": 2,
+        "alpha": 1,
+        "dropout": 0.1
+    }
+}
+Epoch 1, train_loss 0.105786, train_ic 0.021399, train_icir 0.241731, train_ric 0.023999, train_ricir 0.264181, valid_loss 0.0031956036 , valid_ic 0.016999, valid_icir 0.172570, valid_ric 0.020261, valid_ricir 0.187832, test_loss 0.003936, ic 0.036514, icir 0.412609, ric 0.045687, ricir 0.486481, prec@10 0.377637, prec@30 0.358509 

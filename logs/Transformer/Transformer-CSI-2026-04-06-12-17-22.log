@@ -1,0 +1,35 @@
+Dataset:  CSI
+Radom seed: 1234
+GPU: 7
+Learning rate: 0.0001
+Loss: MaskedMSELoss
+
+---------- Transformer ----------
+{
+    "epochs": 200,
+    "lookback_length": 16,
+    "steps": 1,
+    "lr": 0.0001,
+    "clip_grad": 3.0,
+    "data_args": {
+        "dataset": "CSI",
+        "batch_size": 1,
+        "shuffle_train": true,
+        "n_jobs": 20,
+        "valid_year": 2019,
+        "test_year": 2020,
+        "window": 16,
+        "steps": 1
+    },
+    "early_stop": 20,
+    "runner": "csi",
+    "loss": "mse",
+    "model_args": {
+        "d_feat": 1,
+        "d_model": 64,
+        "num_layers": 2,
+        "nhead": 2,
+        "dropout": 0.1
+    }
+}
+Epoch 1, train_loss 0.352854, train_ic 0.006074, train_icir 0.049364, train_ric 0.022233, train_ricir 0.170504, valid_loss 0.1882323998 , valid_ic -0.009207, valid_icir -0.098347, valid_ric 0.008703, valid_ricir 0.084843, test_loss 0.244847, ic -0.019000, icir -0.145967, ric -0.002085, ricir -0.014174, prec@10 0.470370, prec@30 0.497119 

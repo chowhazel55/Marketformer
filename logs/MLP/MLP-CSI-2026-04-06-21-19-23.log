@@ -1,0 +1,34 @@
+Dataset:  CSI
+Radom seed: 1234
+GPU: 7
+Learning rate: 0.001
+Loss: MaskedMSELoss
+
+---------- MLP ----------
+{
+    "epochs": 200,
+    "lookback_length": 16,
+    "steps": 1,
+    "lr": 0.0001,
+    "clip_grad": 3.0,
+    "data_args": {
+        "dataset": "CSI",
+        "batch_size": 1,
+        "shuffle_train": true,
+        "n_jobs": 20,
+        "valid_year": 2019,
+        "test_year": 2020,
+        "window": 8,
+        "steps": 1
+    },
+    "early_stop": 20,
+    "runner": "csi",
+    "loss": "mse",
+    "model_args": {
+        "d_feat": 1,
+        "seq_len": 16,
+        "pred_len": 1,
+        "d_model": 64,
+        "dropout": 0.1
+    }
+}

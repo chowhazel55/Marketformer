@@ -1,0 +1,58 @@
+Dataset:  CSI
+Radom seed: 1234
+GPU: 7
+Learning rate: 0.0001
+Loss: MaskedMSELoss
+
+---------- LSTM ----------
+{
+    "epochs": 200,
+    "lookback_length": 16,
+    "steps": 1,
+    "lr": 0.0001,
+    "clip_grad": 3.0,
+    "data_args": {
+        "dataset": "CSI",
+        "batch_size": 1,
+        "shuffle_train": true,
+        "n_jobs": 20,
+        "valid_year": 2019,
+        "test_year": 2020,
+        "window": 16,
+        "steps": 1
+    },
+    "early_stop": 20,
+    "runner": "csi",
+    "loss": "mse",
+    "model_args": {
+        "d_feat": 1,
+        "hidden_size": 64,
+        "num_layers": 2,
+        "dropout": 0.1
+    }
+}
+Epoch 1, train_loss 0.395425, train_ic 0.005717, train_icir 0.046581, train_ric 0.024143, train_ricir 0.182963, valid_loss 0.2110163566 , valid_ic -0.009143, valid_icir -0.098167, valid_ric 0.009580, valid_ricir 0.092376, test_loss 0.267761, ic -0.019005, icir -0.146878, ric -0.001103, ricir -0.007527, prec@10 0.460494, prec@30 0.485597 
+Epoch 2, train_loss 0.189053, train_ic 0.005114, train_icir 0.042230, train_ric 0.027924, train_ricir 0.218109, valid_loss 0.1337693719 , valid_ic -0.009564, valid_icir -0.102863, valid_ric 0.011942, valid_ricir 0.119854, test_loss 0.188252, ic -0.019330, icir -0.150115, ric -0.001433, ricir -0.010291, prec@10 0.475720, prec@30 0.484636 
+Epoch 3, train_loss 0.127528, train_ic 0.004386, train_icir 0.037239, train_ric 0.024601, train_ricir 0.187684, valid_loss 0.0938511956 , valid_ic -0.009748, valid_icir -0.106012, valid_ric 0.010812, valid_ricir 0.105654, test_loss 0.143902, ic -0.019696, icir -0.154710, ric -0.003181, ricir -0.022403, prec@10 0.520576, prec@30 0.515226 
+Epoch 4, train_loss 0.091398, train_ic 0.003868, train_icir 0.035126, train_ric 0.018989, train_ricir 0.175892, valid_loss 0.0679951409 , valid_ic -0.009369, valid_icir -0.106602, valid_ric 0.013452, valid_ricir 0.167029, test_loss 0.113167, ic -0.019077, icir -0.155456, ric -0.002941, ricir -0.025870, prec@10 0.535802, prec@30 0.518244 
+Epoch 5, train_loss 0.067584, train_ic 0.003869, train_icir 0.036882, train_ric 0.016275, train_ricir 0.152200, valid_loss 0.0513769499 , valid_ic -0.009177, valid_icir -0.107571, valid_ric 0.013392, valid_ricir 0.178065, test_loss 0.091901, ic -0.018647, icir -0.155435, ric -0.003916, ricir -0.037563, prec@10 0.544856, prec@30 0.518107 
+Epoch 6, train_loss 0.051385, train_ic 0.003923, train_icir 0.039941, train_ric 0.007967, train_ricir 0.094194, valid_loss 0.0399393815 , valid_ic -0.008858, valid_icir -0.108803, valid_ric 0.005886, valid_ricir 0.099871, test_loss 0.076151, ic -0.018107, icir -0.155704, ric -0.005195, ricir -0.062036, prec@10 0.542798, prec@30 0.532510 
+Epoch 7, train_loss 0.039954, train_ic 0.004645, train_icir 0.048490, train_ric 0.011118, train_ricir 0.102260, valid_loss 0.0321115428 , valid_ic -0.008651, valid_icir -0.108349, valid_ric 0.001711, valid_ricir 0.019940, test_loss 0.064420, ic -0.017843, icir -0.155192, ric -0.006520, ricir -0.053746, prec@10 0.512757, prec@30 0.505898 
+Epoch 8, train_loss 0.031680, train_ic 0.004828, train_icir 0.054083, train_ric 0.008168, train_ricir 0.105196, valid_loss 0.0261694294 , valid_ic -0.008245, valid_icir -0.109178, valid_ric -0.003283, valid_ricir -0.054172, test_loss 0.055162, ic -0.017315, icir -0.155761, ric -0.004797, ricir -0.052958, prec@10 0.499588, prec@30 0.508093 
+Epoch 9, train_loss 0.025674, train_ic 0.005140, train_icir 0.060193, train_ric 0.002878, train_ricir 0.038418, valid_loss 0.0216301346 , valid_ic -0.007843, valid_icir -0.107972, valid_ric -0.010817, valid_ricir -0.218595, test_loss 0.047792, ic -0.016564, icir -0.152531, ric -0.007193, ricir -0.094976, prec@10 0.482305, prec@30 0.496022 
+Epoch 10, train_loss 0.021266, train_ic 0.005540, train_icir 0.064468, train_ric 0.017216, train_ricir 0.152938, valid_loss 0.0188449106 , valid_ic -0.008049, valid_icir -0.110747, valid_ric -0.003197, valid_ricir -0.036252, test_loss 0.042619, ic -0.016721, icir -0.153991, ric -0.002323, ricir -0.019293, prec@10 0.486420, prec@30 0.506173 
+Epoch 11, train_loss 0.017930, train_ic 0.005442, train_icir 0.068682, train_ric 0.003127, train_ricir 0.034357, valid_loss 0.0161105332 , valid_ic -0.007873, valid_icir -0.115840, valid_ric -0.014559, valid_ricir -0.208273, test_loss 0.037852, ic -0.016005, icir -0.153437, ric -0.008546, ricir -0.085560, prec@10 0.490123, prec@30 0.507819 
+Epoch 12, train_loss 0.015411, train_ic 0.005059, train_icir 0.067930, train_ric -0.004083, train_ricir -0.048432, valid_loss 0.0142394150 , valid_ic -0.007531, valid_icir -0.117310, valid_ric -0.014299, valid_ricir -0.289971, test_loss 0.034290, ic -0.015295, icir -0.151622, ric -0.009013, ricir -0.143358, prec@10 0.495885, prec@30 0.520439 
+Epoch 13, train_loss 0.013436, train_ic 0.004314, train_icir 0.062495, train_ric -0.003032, train_ricir -0.031852, valid_loss 0.0130324604 , valid_ic -0.006677, valid_icir -0.115059, valid_ric -0.008008, valid_ricir -0.127149, test_loss 0.031604, ic -0.013876, icir -0.146031, ric -0.005314, ricir -0.074650, prec@10 0.511523, prec@30 0.529081 
+Epoch 14, train_loss 0.011903, train_ic 0.004917, train_icir 0.066557, train_ric 0.009793, train_ricir 0.089460, valid_loss 0.0116206831 , valid_ic -0.007986, valid_icir -0.126419, valid_ric -0.008975, valid_ricir -0.109166, test_loss 0.029020, ic -0.015503, icir -0.156297, ric -0.005472, ricir -0.047095, prec@10 0.481893, prec@30 0.504664 
+Epoch 15, train_loss 0.010675, train_ic 0.004752, train_icir 0.075353, train_ric -0.011780, train_ricir -0.148892, valid_loss 0.0108165704 , valid_ic -0.006967, valid_icir -0.124404, valid_ric -0.016345, valid_ricir -0.309548, test_loss 0.027130, ic -0.013830, icir -0.149655, ric -0.010702, ricir -0.183776, prec@10 0.490123, prec@30 0.512894 
+Epoch 16, train_loss 0.009685, train_ic 0.004659, train_icir 0.069018, train_ric 0.002232, train_ricir 0.024726, valid_loss 0.0100535867 , valid_ic -0.007233, valid_icir -0.123804, valid_ric -0.006987, valid_ricir -0.129799, test_loss 0.025500, ic -0.014237, icir -0.151493, ric -0.003217, ricir -0.048729, prec@10 0.506584, prec@30 0.525240 
+Epoch 17, train_loss 0.008838, train_ic 0.005496, train_icir 0.076931, train_ric 0.020882, train_ricir 0.164719, valid_loss 0.0095415636 , valid_ic -0.007827, valid_icir -0.128255, valid_ric -0.003951, valid_ricir -0.040831, test_loss 0.024207, ic -0.014969, icir -0.156530, ric -0.000172, ricir -0.001330, prec@10 0.486008, prec@30 0.509739 
+Epoch 18, train_loss 0.008150, train_ic 0.004563, train_icir 0.074312, train_ric -0.020279, train_ricir -0.228825, valid_loss 0.0086321173 , valid_ic -0.007248, valid_icir -0.131637, valid_ric -0.026274, valid_ricir -0.451027, test_loss 0.022604, ic -0.013693, icir -0.152737, ric -0.015992, ricir -0.261372, prec@10 0.525103, prec@30 0.532236 
+Epoch 19, train_loss 0.007575, train_ic 0.003317, train_icir 0.054001, train_ric -0.002616, train_ricir -0.024834, valid_loss 0.0081661581 , valid_ic -0.006733, valid_icir -0.129054, valid_ric -0.007397, valid_ricir -0.104071, test_loss 0.021524, ic -0.013136, icir -0.151839, ric -0.004311, ricir -0.052766, prec@10 0.508230, prec@30 0.528944 
+Epoch 20, train_loss 0.007101, train_ic 0.006089, train_icir 0.080311, train_ric 0.016393, train_ricir 0.130454, valid_loss 0.0078177604 , valid_ic -0.008276, valid_icir -0.134310, valid_ric -0.003483, valid_ricir -0.034295, test_loss 0.020661, ic -0.015349, icir -0.163892, ric -0.005511, ricir -0.039490, prec@10 0.506173, prec@30 0.534431 
+Epoch 21, train_loss 0.006634, train_ic 0.003976, train_icir 0.070245, train_ric -0.008099, train_ricir -0.081970, valid_loss 0.0076412426 , valid_ic -0.006728, valid_icir -0.131963, valid_ric -0.013552, valid_ricir -0.211987, test_loss 0.019916, ic -0.013115, icir -0.155944, ric -0.007047, ricir -0.099001, prec@10 0.496708, prec@30 0.504664 
+Epoch 22, train_loss 0.006244, train_ic 0.005299, train_icir 0.091678, train_ric -0.020959, train_ricir -0.217026, valid_loss 0.0069563799 , valid_ic -0.006689, valid_icir -0.127316, valid_ric -0.028254, valid_ricir -0.469323, test_loss 0.018813, ic -0.012983, icir -0.152022, ric -0.016238, ricir -0.250231, prec@10 0.528807, prec@30 0.527984 
+Epoch 23, train_loss 0.005955, train_ic 0.003932, train_icir 0.074415, train_ric -0.013466, train_ricir -0.130093, valid_loss 0.0070160329 , valid_ic -0.005662, valid_icir -0.125914, valid_ric -0.013629, valid_ricir -0.183768, test_loss 0.018400, ic -0.011363, icir -0.145733, ric -0.008757, ricir -0.108000, prec@10 0.502881, prec@30 0.531824 
+Epoch 24, train_loss 0.005646, train_ic 0.004868, train_icir 0.076840, train_ric 0.005448, train_ricir 0.046979, valid_loss 0.0068444578 , valid_ic -0.007256, valid_icir -0.131718, valid_ric -0.014486, valid_ricir -0.180896, test_loss 0.017879, ic -0.013499, icir -0.155106, ric -0.009651, ricir -0.085833, prec@10 0.516049, prec@30 0.506173 
+Epoch 25, train_loss 0.005374, train_ic 0.005023, train_icir 0.092676, train_ric -0.009316, train_ricir -0.081944, valid_loss 0.0062684671 , valid_ic -0.005020, valid_icir -0.112152, valid_ric -0.011573, valid_ricir -0.145293, test_loss 0.016955, ic -0.010654, icir -0.138592, ric -0.005016, ricir -0.056123, prec@10 0.521811, prec@30 0.538683 

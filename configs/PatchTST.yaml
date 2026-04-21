@@ -1,0 +1,35 @@
+
+
+CSI:
+  epochs: 200
+  lookback_length: 16
+  steps: 1
+  lr: 0.0001
+  clip_grad: 3.0
+  data_args:
+    dataset: "CSI"
+    batch_size: 1
+    shuffle_train: True
+    n_jobs: 4
+    valid_year: 2018
+    test_year: 2019
+    window: 16
+    steps: 1
+  early_stop: 30
+  runner: "csi"
+  loss: "mse"
+  weight_decay: 0 
+  model_args:
+    enc_in: 5420
+    seq_len: 16
+    pred_len: 1
+    e_layers: 3
+    n_heads: 2
+    d_model: 64
+    d_ff: 256
+    dropout: 0.2
+    fc_dropout: 0.1
+    head_dropout: 0.0
+    patch_len: 4
+    stride: 2
+    attn_dropout: 0.0
